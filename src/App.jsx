@@ -1,0 +1,27 @@
+
+import './App.css'
+import About from './componets/About'
+import Contact from './componets/Contact'
+import Footer from './componets/Footer'
+import Hero from './componets/Hero'
+import NavBar from './componets/NavBar'
+import Skills from './componets/Skills'
+import Works from './componets/Works'
+
+
+function App() {
+  
+  return (
+    <div className=''>
+     <NavBar/>
+     <Hero/>
+     <About/>
+     <Skills/>
+     <Works/>
+     <Contact/>
+     <Footer/>
+    </div>
+  )
+}
+
+export default App
