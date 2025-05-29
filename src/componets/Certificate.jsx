@@ -19,7 +19,7 @@ const Certificate = () => {
         </div>
         <div>
             <img src={Cr}  alt="Skills image"
-                className="w-400 h-200 px-9 md:w-full md:h-full"
+                className="w-400 h-200 px-9 md:w-full h-full"
                 data-aos="zoom-in"/>
         </div>
     </div>
