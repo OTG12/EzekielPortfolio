@@ -1,6 +1,7 @@
 
 import './App.css'
 import About from './componets/About'
+import Certificate from './componets/Certificate'
 import Contact from './componets/Contact'
 import Footer from './componets/Footer'
 import Hero from './componets/Hero'
@@ -18,6 +19,7 @@ function App() {
      <About/>
      <Skills/>
      <Works/>
+     <Certificate/>
      <Contact/>
      <Footer/>
     </div>

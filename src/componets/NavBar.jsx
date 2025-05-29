@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // Optional icons from lucide-react (or use your own)
+import { Menu, X } from "lucide-react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +19,7 @@ const NavBar = () => {
           <a href="#About" className="hover:text-white">About</a>
           <a href="#Skills" className="hover:text-white">Skills</a>
           <a href="#Work" className="hover:text-white">Work</a>
+          <a href="#Certificate" className="hover:text-white">Certificate</a>
           <a href="#Contact" className="hover:text-white">Contact</a>
         </nav>
 
@@ -37,7 +38,9 @@ const NavBar = () => {
           <a href="#About" onClick={toggleMenu}>About</a>
           <a href="#Skills" onClick={toggleMenu}>Skills</a>
           <a href="#Work" onClick={toggleMenu}>Work</a>
+          <a href="#Certificate" onClick={toggleMenu}>Certificate</a>
           <a href="#Contact" onClick={toggleMenu}>Contact</a>
+
         </div>
       )}
     </header>

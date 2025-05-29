@@ -1,6 +1,6 @@
 import { useEffect} from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'
+import 'aos/dist/aos.css';
 import { FaLinkedin, FaGithub, FaMailBulk , FaWhatsapp} from "react-icons/fa";
 
 const ContactPage = () => {
@@ -31,7 +31,7 @@ const ContactPage = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/OTG12/my-real-estate.git"
+            href="https://github.com/OTG12/RealEstate"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
