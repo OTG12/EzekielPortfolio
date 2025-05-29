@@ -28,7 +28,7 @@ const Hero = () => {
         </button>
         <div className="flex justify-center md:justify-start gap-6 mt-4 text-2xl">
           <a
-            href="https://github.com/OTG12/RealEstate"
+            href="https://github.com/OTG12"
             target="_blank"
             rel="noopener noreferrer"
             data-aos='zoom-in'

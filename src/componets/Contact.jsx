@@ -31,7 +31,7 @@ const ContactPage = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/OTG12/RealEstate"
+            href="https://github.com/OTG12"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
