@@ -29,7 +29,7 @@ const Works = () => {
         <div className=" flex flex-col w-full md:flex-row justify-center items-center gap-50 px-6 py-10  ">
           <div className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
        <a
-            href="http://smartcash1.vercel.app/signup"
+            href="https://real-estate-fkci.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
@@ -46,7 +46,7 @@ const Works = () => {
               />
               <div className="p-4" data-aos="zoom-in">
                 <h2 className="text-3x1 text-black font-semibold">FRONTEND DEVELOPER</h2>
-                <p className="text-gray-600">Top to see project.</p>
+                <p className="text-gray-600">Tap to see my Real Estate project.</p>
               </div>
             </div>
           </a>
@@ -71,7 +71,7 @@ const Works = () => {
               />
               <div className="p-4" data-aos="zoom-in">
                 <h2 className="text-3x1 text-black font-semibold">FULL STACK WEB DEVELOPER</h2>
-                <p className="text-gray-600">Top to see project.</p>
+                <p className="text-gray-600">Tap to see My Banking project.</p>
               </div>
             </div>
           </a>
