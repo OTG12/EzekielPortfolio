@@ -30,7 +30,7 @@ const About = () => {
         </div>
 
         <div >
-          <p data-aos='zoom-in' className=" text-2xl font-bold md:text-lg text-white leading-relaxed">
+          <p data-aos='zoom-in' className=" text-2xl md:text-lg text-white leading-relaxed">
             I'm a passionate Front-End Developer with a strong foundation in <br/>
             React and modern web technologies. I enjoy building user friendly,<br/>
             responsive interfaces and continuously improving my skills through<br/>

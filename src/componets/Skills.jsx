@@ -60,7 +60,7 @@ export default function Skills() {
       </div>
       <div className=" flex flex-col w-full md:flex-row justify-center items-center gap-30 px-10 py-10">
 
-         <div data-aos='zoom-in' className="font-bold text-2xl text-white">
+         <div data-aos='zoom-in' className="text-2xl text-white">
           <p>
             I’m a passionate Frontend Developer with strong skills in HTML5,
             <br />

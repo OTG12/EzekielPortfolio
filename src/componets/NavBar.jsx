@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <header className="fixed top-0 w-full bg-red-900 text-white shadow-md z-50 ">
       <div className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-        <span className="font-bold text-xl">OT-G</span>
+        <span className="font-extrabold text-3xl text-white">OT-G</span>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6 text-gray-200 text-lg">
