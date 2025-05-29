@@ -20,7 +20,7 @@
     font-optical-sizing: auto;
     background: #1d1d1d;
 
-    /* former bg: 030014 */
+    
   }
   h1 {
     @apply mx-auto max-w-4xl text-center text-5xl font-bold leading-tight tracking-[-1%] text-white sm:text-[64px] sm:leading-[76px];
