@@ -66,7 +66,7 @@ export default function Skills() {
             <br />
             CSS3, JavaScript (ES6+), and React.js. I build responsive,
             <br />
-            user-friendly interfaces using tools like Tailwind CSS, Bootstrap,
+            user friendly interfaces using tools like Tailwind CSS, Bootstrap,
             <br />
             and React Router. I’m experienced in working with REST APIs,
             <br />
