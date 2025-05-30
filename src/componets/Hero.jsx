@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="text-center md:text-left font-bold flex flex-col">
         <div data-aos='zoom-in' className="text-amber-50 md:text-left leading-tight text-xl">
           <h2 className="text-2xl mb-3">Hey</h2>
-          <h2 className="text-5xl max-w-lg">I'm <span className="text-red-500 ">Ezekiel</span> a React Developer</h2>
+          <h2 className="text-5xl max-w-lg">I'm <span className="text-red-500 ">Ezekiel</span> a Frontend Developer</h2>
           <button className="mt-10 px-6 py-2 w-fit m-auto md:m-0 md:mt-5 text-lg font-medium bg-red-500 text-white rounded-md hover:bg-blue-700 transition duration-300">
             Contact Me
           </button>
