@@ -1,7 +1,4 @@
 import React, { useEffect } from "react";
-import Card from "react-bootstrap/Card";
-import image from "../assets/Real.jpeg";
-import image1 from "../assets/SmartOt.jpeg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -14,72 +11,69 @@ const Works = () => {
       delay: 100,
     });
   }, []);
-  return (
-    <>
-      <div id="Work">
-        <div className=" ">
-          <h1
-            data-aos="zoom-in"
-            className="font-bold text-center text-3xl underline"
-          >
-            Works
-          </h1>
-        </div>
 
-        <div className=" flex flex-col w-full md:flex-row justify-center items-center gap-50 px-6 py-10  ">
-          <div className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
-       <a
-            href="https://real-estate-fkci.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
+  const projects = [
+    {
+      title: "REAL ESTATE WEBSITE",
+      url: "https://real-estate-fkci.vercel.app/",
+      description: "A property buying and selling platform.",
+    },
+    {
+      title: "BANKING APP",
+      url: "https://smartcash1.vercel.app/signup",
+      description: "A full-stack banking application.",
+    },
+    {
+      title: "DELIVERY APP",
+      url: "https://otxpress.vercel.app/",
+      description: "OtXpress – a delivery booking and tracking app.",
+    },
+    {
+      title: "AI CHAT APP",
+      url: "https://ai-chat-eight-teal.vercel.app/",
+      description: "A smart chatbot powered by AI.",
+    },
+  ];
+
+  return (
+    <div id="Work" className="py-10 px-6">
+      <h1
+        data-aos="zoom-in"
+        className="font-bold text-center text-3xl underline mb-10"
+      >
+        Works
+      </h1>
+
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-10">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden"
+            data-aos="zoom-in"
           >
-            <div
-              className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 active:scale-95"
-              data-aos="zoom-in"
-            >
-              <img
-                src={image}
-                alt="Skills image"
-                className="w-full h-full object-cover"
-                data-aos="zoom-in"
-              />
-              <div className="p-4" data-aos="zoom-in">
-                <h2 className="text-3x1 text-black font-semibold">FRONTEND DEVELOPER</h2>
-                <p className="text-gray-600">Tap to see my Real Estate project.</p>
-              </div>
+            <iframe
+              src={project.url}
+              title={project.title}
+              className="w-full h-48 border-none"
+            ></iframe>
+            <div className="p-4">
+              <h2 className="text-xl text-black font-semibold">{project.title}</h2>
+              <p className="text-gray-600">{project.description}</p>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 text-sm mt-2 inline-block hover:underline"
+              >
+                Open in new tab ↗
+              </a>
             </div>
-          </a>
           </div>
-        
-          <div>
-            <a
-            href="http://smartcash1.vercel.app/signup"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <div
-              className="max-w-sm bg-white rounded-xl shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 active:scale-95"
-              data-aos="zoom-in"
-            >
-              <img
-                src={image1}
-                alt="Skills image"
-                className="w-full h-full object-cover"
-                data-aos="zoom-in"
-              />
-              <div className="p-4" data-aos="zoom-in">
-                <h2 className="text-3x1 text-black font-semibold">FULL STACK WEB DEVELOPER</h2>
-                <p className="text-gray-600">Tap to see My Banking project.</p>
-              </div>
-            </div>
-          </a>
-          </div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
 export default Works;
+

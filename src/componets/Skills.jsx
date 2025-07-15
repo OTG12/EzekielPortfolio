@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import backgroundImage from '../assets/skills.avif'
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -13,7 +12,6 @@ import {
   FaFigma,
   FaCode,
 } from "react-icons/fa";
-
 import {
   SiTailwindcss,
   SiPostman,
@@ -22,15 +20,15 @@ import {
 } from "react-icons/si";
 
 export default function Skills() {
-   useEffect(() => {
-        AOS.init({
-          offset: 200,
-          duration: 800,
-          easing: 'ease-in-sine',
-          delay: 100,
-        })
-      }, []);
-  
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+  }, []);
+
   const skills = [
     { icon: <FaHtml5 className="text-orange-600" />, label: "HTML5" },
     { icon: <FaCss3Alt className="text-blue-600" />, label: "CSS3" },
@@ -38,10 +36,7 @@ export default function Skills() {
     { icon: <FaReact className="text-blue-400" />, label: "React" },
     { icon: <SiNextdotjs />, label: "Next.js" },
     { icon: <SiTypescript className="text-blue-600" />, label: "TypeScript" },
-    {
-      icon: <SiTailwindcss className="text-teal-500" />,
-      label: "Tailwind CSS",
-    },
+    { icon: <SiTailwindcss className="text-teal-500" />, label: "Tailwind CSS" },
     { icon: <FaBootstrap className="text-purple-600" />, label: "Bootstrap" },
     { icon: <FaGitAlt className="text-orange-500" />, label: "Git" },
     { icon: <FaGithub />, label: "GitHub" },
@@ -49,52 +44,60 @@ export default function Skills() {
     { icon: <FaFigma className="text-pink-500" />, label: "Figma" },
     { icon: <FaCode className="text-blue-500" />, label: "VS Code" },
   ];
- 
-
 
   return (
-    <>
-    <div id='Skills' className="" >
-      <div>
-        <h1 data-aos='zoom-in' className="font-bold text-center text-3xl underline">Skills</h1>
-      </div>
-      <div className=" flex flex-col w-full md:flex-row justify-center items-center gap-30 px-10 py-10">
+    <section id="Skills" className="bg-[#1f1f1f] text-white py-16 px-6">
+      <h1
+        data-aos="zoom-in"
+        className="text-3xl md:text-4xl font-bold text-center underline mb-12"
+      >
+        Skills
+      </h1>
 
-         <div data-aos='zoom-in' className="text-2xl text-white">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
+        {/* Text Section */}
+        <div data-aos="zoom-in" className="md:w-1/2 text-base md:text-lg leading-relaxed">
           <p>
-            I’m a passionate Frontend Developer with strong skills in HTML5,
-            <br />
-            CSS3, JavaScript (ES6+), and React.js. I build responsive,
-            <br />
-            user friendly interfaces using tools like Tailwind CSS, Bootstrap,
-            <br />
-            and React Router. I’m experienced in working with REST APIs,
-            <br />
-            managing code with Git/GitHub, and translating designs from Figma
-            <br />
-            into functional web pages. I’m also familiar with Postman, Chrome
-            <br />
-            DevTools, and continuously improving by learning Next.js and
-            <br />
-            TypeScript. I thrive in team settings and enjoy solving real world
-            <br />
-            problems through clean, efficient code.
+            I’m a passionate frontend developer with hands on experience in
+            building modern, responsive web applications using:
           </p>
+          <ul className="list-disc list-inside mt-4 space-y-2">
+            <li>
+              <strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), React,
+              Tailwind CSS, Bootstrap, and React Router.
+            </li>
+            <li>
+              <strong>Tools:</strong> Git, GitHub, VS Code, Chrome DevTools,
+              Postman, and Figma.
+            </li>
+            <li>
+              <strong>Currently learning:</strong> Next.js and TypeScript to
+              grow into fullstack development.
+            </li>
+            <li>
+              I enjoy solving real world problems through clean code and thrive
+              in collaborative team environments.
+            </li>
+          </ul>
         </div>
 
-
-
-        <div data-aos='zoom-in' className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 p-4 text-center text-2xl text-gray-700">
+        {/* Icon Grid */}
+        <div
+          data-aos="zoom-in"
+          className="md:w-1/2 grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center text-gray-300"
+        >
           {skills.map((skill, index) => (
-            <div key={index} className="flex flex-col items-center space-y-2">
-              <div className="text-4xl">{skill.icon}</div>
+            <div
+              key={index}
+              className="flex flex-col items-center text-center hover:scale-110 transition-transform duration-300"
+            >
+              <div className="text-4xl mb-2">{skill.icon}</div>
               <span className="text-sm">{skill.label}</span>
             </div>
           ))}
         </div>
-       
       </div>
-      </div>
-    </>
+    </section>
   );
 }
+

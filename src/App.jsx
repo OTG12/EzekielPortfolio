@@ -6,6 +6,7 @@ import Contact from './componets/Contact'
 import Footer from './componets/Footer'
 import Hero from './componets/Hero'
 import NavBar from './componets/NavBar'
+import SplitText from './componets/SplitText'
 import Skills from './componets/Skills'
 import Works from './componets/Works'
 
@@ -19,6 +20,7 @@ function App() {
      <About/>
      <Skills/>
      <Works/>
+     <SplitText/>
      <Certificate/>
      <Contact/>
      <Footer/>
