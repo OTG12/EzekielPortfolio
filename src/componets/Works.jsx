@@ -33,6 +33,12 @@ const Works = () => {
       url: "https://ai-chat-eight-teal.vercel.app/",
       description: "A smart chatbot powered by AI.",
     },
+    {
+      title: "Landing Page",
+      url: "https://dehrealties.com/",
+      description: "A Real Estate Landing page.",
+    },
+
   ];
 
   return (
