@@ -25,7 +25,7 @@ const Works = () => {
     },
     {
       title: "DELIVERY APP",
-      url: "https://otxpress.vercel.app/",
+      url: "https://otxpress-three.vercel.app/",
       description: "OtXpress – a delivery booking and tracking app.",
     },
     {
