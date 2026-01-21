@@ -69,7 +69,7 @@ const Footer = () => {
                   <Code2 className="w-6 h-6 text-cyan-300" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-cyan-100">OT-G Development</h3>
+                  <h3 className="text-xl font-bold text-cyan-100">OT G HIVE Development</h3>
                   <p className="text-sm text-blue-300/60">Premium Digital Solutions</p>
                 </div>
               </div>
@@ -156,7 +156,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center md:text-left">
               <p className="text-blue-300/70 text-sm">
-                &copy; {new Date().getFullYear()} OT-G Development. All rights reserved.
+                &copy; {new Date().getFullYear()} OT G HIVE Development. All rights reserved.
               </p>
               <p className="text-blue-400/50 text-xs mt-1 flex items-center justify-center md:justify-start gap-1">
                 Made with 

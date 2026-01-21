@@ -66,7 +66,7 @@ const About = () => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/15 to-cyan-500/15 border border-blue-500/30 backdrop-blur-sm mb-6">
             <Sparkles className="w-4 h-4 text-cyan-300" />
-            <span className="text-sm font-medium text-blue-200">About OT-G</span>
+            <span className="text-sm font-medium text-blue-200">About OT G HIVE</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -157,7 +157,7 @@ const About = () => {
               <h2 className="text-2xl font-bold text-cyan-100">Our Expertise</h2>
               <div className="space-y-4 text-blue-200/90 leading-relaxed">
                 <p>
-                  At OT-G Development, we specialize in creating modern, scalable web applications 
+                  At OT G HIVE  Development, we specialize in creating modern, scalable web applications 
                   that deliver exceptional user experiences. Our approach combines cutting-edge 
                   technology with thoughtful design to build solutions that stand the test of time.
                 </p>

@@ -126,7 +126,7 @@ const Hero = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="block text-blue-100">Welcome to</span>
                 <span className="block mt-4 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
-                  OT-G Development
+                  OT G HIVE Development
                 </span>
               </h1>
               <div className="flex items-center justify-center lg:justify-start gap-2">
