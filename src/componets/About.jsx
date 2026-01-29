@@ -11,7 +11,10 @@ import {
   Target,
   Rocket,
   Brain,
-  Users
+  Users,
+  Briefcase,
+  Monitor,
+  Paintbrush
 } from "lucide-react";
 
 const About = () => {
@@ -104,6 +107,48 @@ const About = () => {
               </p>
             </div>
 
+            {/* Services Overview */}
+            <div className="p-6 rounded-3xl bg-gradient-to-br from-blue-900/20 to-cyan-900/10 border border-blue-800/30 backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-cyan-100 mb-6">Our Services</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-3 rounded-xl bg-blue-900/10 hover:bg-blue-900/20 transition-colors">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20">
+                    <Monitor className="w-5 h-5 text-cyan-300" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-cyan-100">Website & Web App Development</h4>
+                    <p className="text-sm text-blue-300/70 mt-1">
+                      We build and manage custom websites and web applications tailored to your specific needs.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4 p-3 rounded-xl bg-blue-900/10 hover:bg-blue-900/20 transition-colors">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
+                    <Paintbrush className="w-5 h-5 text-cyan-300" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-cyan-100">Graphics Design</h4>
+                    <p className="text-sm text-blue-300/70 mt-1">
+                      Professional graphics design services including logos, banners, and UI/UX elements.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4 p-3 rounded-xl bg-blue-900/10 hover:bg-blue-900/20 transition-colors">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-indigo-500/20 to-blue-500/20">
+                    <Briefcase className="w-5 h-5 text-cyan-300" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-cyan-100">Contract & Freelance Work</h4>
+                    <p className="text-sm text-blue-300/70 mt-1">
+                      Available for contract projects and freelance opportunities. Let's work together!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Values Grid */}
             <div>
               <h3 className="text-xl font-bold text-blue-100 mb-6">Core Values</h3>
@@ -157,17 +202,21 @@ const About = () => {
               <h2 className="text-2xl font-bold text-cyan-100">Our Expertise</h2>
               <div className="space-y-4 text-blue-200/90 leading-relaxed">
                 <p>
-                  At OT G HIVE  Development, we specialize in creating modern, scalable web applications 
+                  At OT G HIVE Development, we specialize in creating modern, scalable web applications 
                   that deliver exceptional user experiences. Our approach combines cutting-edge 
                   technology with thoughtful design to build solutions that stand the test of time.
                 </p>
                 <p>
-                  We believe in writing clean, maintainable code and following industry best practices 
-                  to ensure our projects are not only functional but also future-proof and easy to scale.
+                  We <strong className="text-cyan-300">build and manage websites & web applications</strong> from concept to deployment, 
+                  ensuring they meet the highest standards of performance and user experience.
                 </p>
                 <p>
-                  From concept to deployment, we work closely with our clients to understand their vision 
-                  and transform it into a digital reality that drives results.
+                  Our <strong className="text-cyan-300">expert graphics design</strong> services complement our development work, 
+                  providing complete visual solutions that engage and convert your audience.
+                </p>
+                <p>
+                  We are <strong className="text-cyan-300">open to contracts and freelance opportunities</strong>, bringing our expertise 
+                  to your projects with the same dedication and quality we apply to all our work.
                 </p>
               </div>
             </div>
@@ -207,6 +256,28 @@ const About = () => {
                 ))}
               </div>
             </div>
+
+            {/* Freelance Availability Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              className="p-6 rounded-2xl bg-gradient-to-r from-blue-900/20 to-cyan-900/10 border border-cyan-500/30 backdrop-blur-sm"
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20">
+                  <Briefcase className="w-6 h-6 text-cyan-300" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-cyan-100 mb-2">Available for Work</h4>
+                  <p className="text-blue-200/80">
+                    Currently accepting new projects, contracts, and freelance opportunities. 
+                    Let's discuss how we can bring your vision to life with our expertise in 
+                    web development and design.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Call to Action */}
             <motion.div
@@ -251,6 +322,9 @@ const About = () => {
               { name: "MongoDB", color: "from-green-400 to-blue-400" },
               { name: "Firebase", color: "from-yellow-500 to-orange-500" },
               { name: "AWS", color: "from-orange-500 to-yellow-500" },
+              { name: "Photoshop", color: "from-blue-500 to-purple-500" },
+              { name: "Illustrator", color: "from-orange-500 to-yellow-500" },
+              { name: "Figma", color: "from-purple-500 to-pink-500" },
             ].map((tech, index) => (
               <div
                 key={index}

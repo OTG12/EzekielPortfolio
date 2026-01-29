@@ -15,7 +15,10 @@ import {
   Smartphone,
   Wifi,
   Lock,
-  Settings
+  Settings,
+  Briefcase,
+  Monitor,
+  Paintbrush
 } from "lucide-react";
 
 const Skills = () => {
@@ -59,7 +62,7 @@ const Skills = () => {
     },
     {
       title: "DevOps & Tools",
-      icon: <Settings className="w-6 h-6" />, // Changed from Cogs to Settings
+      icon: <Settings className="w-6 h-6" />,
       color: "from-indigo-400 to-blue-600",
       skills: [
         { name: "Git", level: 90, icon: "📊" },
@@ -79,6 +82,8 @@ const Skills = () => {
     { name: "HTML5", icon: "🌐", category: "Frontend", level: 95 },
     { name: "CSS3", icon: "🎨", category: "Frontend", level: 93 },
     { name: "Figma", icon: "✏️", category: "Design", level: 90 },
+    { name: "Adobe Photoshop", icon: "🖌️", category: "Design", level: 85 },
+    { name: "Adobe Illustrator", icon: "✏️", category: "Design", level: 80 },
     { name: "Node.js", icon: "⚡", category: "Backend", level: 82 },
     { name: "Express", icon: "🚂", category: "Backend", level: 80 },
     { name: "MongoDB", icon: "🍃", category: "Database", level: 78 },
@@ -108,6 +113,45 @@ const Skills = () => {
       description: "Utilizing cutting-edge development tools and practices for efficient delivery",
       icon: <Terminal className="w-5 h-5" />
     },
+  ];
+
+  const serviceSpecializations = [
+    {
+      title: "Web Development",
+      description: "Building and managing custom websites and web applications tailored to specific business needs",
+      icon: <Monitor className="w-5 h-5" />,
+      color: "from-blue-500 to-cyan-400"
+    },
+    {
+      title: "UI/UX Design",
+      description: "Creating intuitive and visually appealing user interfaces with exceptional user experience",
+      icon: <Palette className="w-5 h-5" />,
+      color: "from-cyan-500 to-blue-400"
+    },
+    {
+      title: "Graphics Design",
+      description: "Professional graphics design including logos, banners, marketing materials, and branding",
+      icon: <Paintbrush className="w-5 h-5" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Contract Work",
+      description: "Available for project-based contracts and long-term collaborations",
+      icon: <Briefcase className="w-5 h-5" />,
+      color: "from-indigo-500 to-blue-500"
+    },
+    {
+      title: "Freelance Services",
+      description: "Flexible freelance solutions for businesses of all sizes",
+      icon: <Code2 className="w-5 h-5" />,
+      color: "from-blue-600 to-cyan-500"
+    },
+    {
+      title: "Consultation",
+      description: "Technical consultation and architecture planning for digital projects",
+      icon: <Cpu className="w-5 h-5" />,
+      color: "from-cyan-600 to-blue-600"
+    }
   ];
 
   return (
@@ -154,7 +198,53 @@ const Skills = () => {
           
           <p className="text-xl text-blue-300/80 max-w-3xl mx-auto">
             A comprehensive suite of modern technologies and methodologies to bring your vision to life.
+            <span className="block mt-3 text-cyan-200/90">
+              We build websites & web apps, provide expert graphics design, and are open to contracts and freelance opportunities.
+            </span>
           </p>
+        </motion.div>
+
+        {/* Service Specializations */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mb-16"
+        >
+          <h2 className="text-2xl font-bold text-center text-cyan-100 mb-8">Service Specializations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceSpecializations.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-blue-900/10 to-cyan-900/5 border border-blue-800/20 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color} bg-opacity-20 group-hover:scale-110 transition-transform`}>
+                    <div className="text-cyan-300">
+                      {service.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-cyan-100 flex-1">{service.title}</h3>
+                </div>
+                <p className="text-blue-300/70 text-sm leading-relaxed">{service.description}</p>
+                
+                {/* Highlight key services */}
+                {(service.title === "Web Development" || service.title === "Graphics Design" || service.title === "Contract Work" || service.title === "Freelance Services") && (
+                  <div className="mt-4 pt-3 border-t border-blue-800/20">
+                    <span className="text-xs px-2 py-1 rounded-full bg-blue-900/30 text-cyan-300">
+                      {service.title === "Web Development" && "Build & Manage Websites"}
+                      {service.title === "Graphics Design" && "Expert Design Services"}
+                      {service.title === "Contract Work" && "Available for Projects"}
+                      {service.title === "Freelance Services" && "Open for Opportunities"}
+                    </span>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         {/* Skill Categories */}
@@ -164,7 +254,7 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
               className="group p-6 rounded-3xl bg-gradient-to-br from-blue-900/20 to-cyan-900/10 border border-blue-800/30 backdrop-blur-sm hover:border-cyan-500/30 transition-all duration-300"
               onMouseEnter={() => setHoveredSkill(category.title)}
               onMouseLeave={() => setHoveredSkill(null)}
@@ -192,7 +282,7 @@ const Skills = () => {
                       <motion.div
                         initial={{ width: 0 }}
                         animate={isInView ? { width: `${skill.level}%` } : {}}
-                        transition={{ duration: 1.5, delay: 0.3 + index * 0.1, ease: "easeOut" }}
+                        transition={{ duration: 1.5, delay: 1.0 + index * 0.1, ease: "easeOut" }}
                         className={`h-full rounded-full bg-gradient-to-r ${category.color}`}
                       />
                     </div>
@@ -207,7 +297,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 1.6 }}
           className="mb-16"
         >
           <h2 className="text-2xl font-bold text-center text-cyan-100 mb-8">Complete Skill Set</h2>
@@ -217,7 +307,7 @@ const Skills = () => {
                 key={skill.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
+                transition={{ duration: 0.3, delay: 1.7 + index * 0.05 }}
                 whileHover={{ scale: 1.05 }}
                 className="group relative px-4 py-2.5 rounded-xl bg-gradient-to-br from-blue-900/10 to-cyan-900/5 border border-blue-800/20 hover:border-cyan-500/40 transition-all duration-300 cursor-pointer"
                 onMouseEnter={() => setHoveredSkill(skill.name)}
@@ -246,7 +336,7 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1 }}
+          transition={{ duration: 0.6, delay: 1.8 }}
           className="mb-16"
         >
           <h2 className="text-2xl font-bold text-center text-cyan-100 mb-8">Areas of Expertise</h2>
@@ -270,31 +360,74 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* Current Focus */}
+        {/* Current Focus & Availability */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.6, delay: 2.0 }}
           className="p-8 rounded-3xl bg-gradient-to-r from-blue-900/20 via-cyan-900/10 to-blue-900/20 border border-blue-800/30 backdrop-blur-sm"
         >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-cyan-100 mb-2">Currently Mastering</h3>
-              <p className="text-blue-300/80">
-                Expanding expertise in cloud architecture, advanced TypeScript patterns, 
-                and scalable system design for enterprise applications.
-              </p>
+              <h3 className="text-xl font-bold text-cyan-100 mb-4">Current Focus & Availability</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20">
+                    <Monitor className="w-5 h-5 text-cyan-300" />
+                  </div>
+                  <div>
+                    <p className="text-blue-200/90">
+                      <strong className="text-cyan-300">Building & Managing Websites:</strong> Creating custom web solutions that drive business growth
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20">
+                    <Paintbrush className="w-5 h-5 text-cyan-300" />
+                  </div>
+                  <div>
+                    <p className="text-blue-200/90">
+                      <strong className="text-cyan-300">Expert Graphics Design:</strong> Professional design services for all your visual needs
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-gradient-to-r from-indigo-500/20 to-blue-500/20">
+                    <Briefcase className="w-5 h-5 text-cyan-300" />
+                  </div>
+                  <div>
+                    <p className="text-blue-200/90">
+                      <strong className="text-cyan-300">Open to Contracts & Freelance:</strong> Available for new projects and collaborations
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="flex gap-3">
-              <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-300 text-sm font-medium">
-                Cloud Native
-              </span>
-              <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-300 text-sm font-medium">
-                Microservices
-              </span>
-              <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-300 text-sm font-medium">
-                Advanced TS
-              </span>
+            
+            <div>
+              <h3 className="text-xl font-bold text-cyan-100 mb-4">Currently Mastering</h3>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-300 text-sm font-medium">
+                  Cloud Architecture
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-300 text-sm font-medium">
+                  Advanced TypeScript
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-300 text-sm font-medium">
+                  Microservices
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-300 text-sm font-medium">
+                  Scalable Design
+                </span>
+              </div>
+              
+              <div className="mt-6 p-4 rounded-xl bg-blue-900/20 border border-blue-500/20">
+                <p className="text-sm text-cyan-200/80">
+                  💡 <strong>Interested in working together?</strong> Whether it's a website, web app, design project, or ongoing contract work, let's discuss how we can bring your vision to life.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

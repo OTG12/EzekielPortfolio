@@ -155,11 +155,36 @@ const Hero = () => {
               />
             </div>
 
-            {/* Description */}
-            <p className="text-lg md:text-xl text-blue-300/80 max-w-2xl leading-relaxed">
-              We transform complex challenges into elegant, high-performance digital solutions. 
-              Specializing in modern web technologies and cutting-edge design principles.
-            </p>
+            {/* Enhanced Description */}
+            <div className="space-y-4">
+              <p className="text-lg md:text-xl text-blue-300/80 max-w-2xl leading-relaxed">
+                We transform complex challenges into elegant, high-performance digital solutions. 
+                Specializing in modern web technologies and cutting-edge design principles.
+              </p>
+              
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 p-1 rounded-md bg-blue-500/20">
+                    <FaCode className="w-4 h-4 text-cyan-300" />
+                  </div>
+                  <p className="text-blue-200/90">We build and manage websites & web apps</p>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 p-1 rounded-md bg-blue-500/20">
+                    <Palette className="w-4 h-4 text-cyan-300" />
+                  </div>
+                  <p className="text-blue-200/90">Expert graphics design services</p>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="mt-1 p-1 rounded-md bg-blue-500/20">
+                    <Zap className="w-4 h-4 text-cyan-300" />
+                  </div>
+                  <p className="text-blue-200/90">Open to contracts and freelance jobs</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Services Tags */}
