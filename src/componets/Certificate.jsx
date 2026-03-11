@@ -85,7 +85,7 @@ const Certificate = () => {
 
   return (
     <section
-      id="certificate"
+      id="Certificate"
       ref={ref}
       className="py-24 px-6 bg-gradient-to-b from-[#020617] to-[#030b1a]"
     >

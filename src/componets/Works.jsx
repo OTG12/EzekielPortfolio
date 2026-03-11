@@ -9,7 +9,7 @@ const projects = [
       "A property listing platform where users can browse and search homes with location-based filtering.",
     tech: ["React", "Tailwind", "Firebase"],
     url: "https://real-estate-fkci.vercel.app/",
-    github: "https://github.com/OTG12/real-estate",
+    github: "https://github.com/OTG12/RealEstate.git",
   },
   {
     title: "SmartCash Banking",
@@ -17,7 +17,7 @@ const projects = [
       "A banking-style web application with account features, authentication, and transaction interfaces.",
     tech: ["React", "Node.js", "MongoDB"],
     url: "https://smartcash1.vercel.app/signup",
-    github: "https://github.com/OTG12/banking-app",
+    github: "https://github.com/Joanisgoofy/Smartcash1.git",
   },
   {
     title: "OtXpress Delivery",
@@ -25,7 +25,7 @@ const projects = [
       "A delivery booking platform where users can schedule deliveries and track orders in real time.",
     tech: ["React", "Tailwind", "Express"],
     url: "https://otxpress-three.vercel.app/",
-    github: "https://github.com/OTG12/delivery-app",
+    github: "https://github.com/emekadefirst/otxpress.git",
   },
   {
     title: "AI Chat Assistant",
@@ -33,7 +33,7 @@ const projects = [
       "An AI-powered chat interface that responds to user questions using modern AI APIs.",
     tech: ["React", "OpenAI API", "Tailwind"],
     url: "https://ai-chat-eight-teal.vercel.app/",
-    github: "https://github.com/OTG12/ai-chat",
+    github: "https://github.com/OTG12/AI-chat.git",
   },
   {
     title: "DehRealties Landing",
@@ -41,7 +41,7 @@ const projects = [
       "A responsive landing page for a real estate company with smooth animations and optimized layout.",
     tech: ["React", "Tailwind"],
     url: "https://dehrealties.com/",
-    github: "https://github.com/OTG12/real-estate-landing",
+    github: "https://github.com/OTG12/landingpage.git",
   },
   {
     title: "Portfolio V3",
@@ -56,10 +56,11 @@ const projects = [
 const Works = () => {
   return (
     <section
-      id="works"
+      id="Work"
       className="py-24 px-6 bg-gradient-to-b from-[#020617] to-[#030b1a]"
     >
       <div className="max-w-6xl mx-auto text-center">
+
         <h2 className="text-4xl font-bold text-cyan-300 mb-4">
           Selected Projects
         </h2>
@@ -69,14 +70,19 @@ const Works = () => {
           Each one focuses on performance, usability, and clean design.
         </p>
 
+        {/* PROJECT GRID */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
-              key={index}
+              key={project.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
               whileHover={{ y: -6 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
               className="bg-[#061029] border border-cyan-500/10 rounded-xl p-6 text-left hover:border-cyan-400/40 transition"
             >
-              {/* Title */}
+              {/* TITLE */}
               <a
                 href={project.url}
                 target="_blank"
@@ -86,16 +92,16 @@ const Works = () => {
                 {project.title}
               </a>
 
-              {/* Description */}
+              {/* DESCRIPTION */}
               <p className="text-blue-200/70 mt-3 text-sm leading-relaxed">
                 {project.description}
               </p>
 
-              {/* Tech Stack */}
+              {/* TECH STACK */}
               <div className="flex flex-wrap gap-2 mt-4">
-                {project.tech.map((tech, i) => (
+                {project.tech.map((tech) => (
                   <span
-                    key={i}
+                    key={tech}
                     className="text-xs px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-300"
                   >
                     {tech}
@@ -103,17 +109,20 @@ const Works = () => {
                 ))}
               </div>
 
-              {/* Links */}
+              {/* LINKS */}
               <div className="flex gap-4 mt-6">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-cyan-300 hover:text-cyan-100 transition"
-                >
-                  <ExternalLink size={16} />
-                  Live
-                </a>
+
+                {project.url !== "#" && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-cyan-300 hover:text-cyan-100 transition"
+                  >
+                    <ExternalLink size={16} />
+                    Live
+                  </a>
+                )}
 
                 <a
                   href={project.github}
@@ -124,13 +133,15 @@ const Works = () => {
                   <Github size={16} />
                   Code
                 </a>
+
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Stats */}
+        {/* STATS */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-20 text-center">
+
           <div>
             <div className="text-3xl font-bold text-cyan-300">6+</div>
             <div className="text-blue-300/70 text-sm">Projects Built</div>
@@ -145,6 +156,7 @@ const Works = () => {
             <div className="text-3xl font-bold text-cyan-300">1+</div>
             <div className="text-blue-300/70 text-sm">Years Learning</div>
           </div>
+
         </div>
       </div>
     </section>

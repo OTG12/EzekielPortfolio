@@ -87,7 +87,7 @@ const ContactPage = () => {
 
   return (
     <section
-      id="contact"
+      id="Contact"
       className="py-24 px-6 bg-gradient-to-b from-[#020617] to-[#030b1a]"
     >
       <div className="max-w-6xl mx-auto">
